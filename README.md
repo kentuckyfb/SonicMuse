@@ -1,73 +1,260 @@
-# Welcome to your Lovable project
 
-## Project info
+# SonicMuse
 
-**URL**: https://lovable.dev/projects/280eccf9-f011-4146-905a-0e97a49dbc08
+A modern, minimalist music discovery platform that connects with Spotify to help users find new music based on their preferences.
 
-## How can I edit this code?
+![SonicMuse](https://via.placeholder.com/800x400?text=SonicMuse)
 
-There are several ways of editing your application.
+## 🎵 Features
 
-**Use Lovable**
+- **Genre Selection**: Discover music from specific genres or mix multiple genres
+- **Year/Era Filtering**: Find music from specific years or eras
+- **Popularity Control**: Toggle between mainstream hits and underground gems
+- **Spotify Integration**: Connect your Spotify account for personalized recommendations
+- **Playlist Creation**: Save your discoveries directly to custom Spotify playlists
+- **Similar Song Recommendations**: Find music similar to songs you already love
+- **Modern Interface**: Clean, black and white design inspired by Vercel's UI
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/280eccf9-f011-4146-905a-0e97a49dbc08) and start prompting.
+## 🚀 Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React + Vite
+- **UI Framework**: Tailwind CSS
+- **State Management**: React Context API
+- **Authentication**: Supabase Auth
+- **Database**: Supabase
+- **APIs**: Spotify Web API
+- **Deployment**: Vercel
 
-**Use your preferred IDE**
+## 📋 Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v18+)
+- npm or yarn
+- Spotify Developer Account (for API access)
+- Supabase Account (for auth and database)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Installation
 
-Follow these steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sonicmuse.git
+   cd sonicmuse
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Create a `.env` file in the root directory with the following:
+   ```
+   VITE_SPOTIFY_CLIENT_ID=your_spotify_client_id
+   VITE_SPOTIFY_REDIRECT_URI=http://localhost:5173/callback
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 🔐 Spotify API Setup
+
+1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
+2. Create a new application
+3. Set the redirect URI to `http://localhost:5173/callback` (for development)
+4. Copy your Client ID and Client Secret to your `.env` file
+
+## 🗄️ Supabase Setup
+
+1. Create a new project on [Supabase](https://supabase.com/)
+2. Set up authentication with the following tables:
+   - `users` - For user information and preferences
+   - `saved_songs` - For tracking saved recommendations
+   - `playlists` - For custom playlists created on the platform
+3. Copy your project URL and anon key to your `.env` file
+
+## 📱 Application Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── context/          # React Context for state management
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions and API clients
+├── pages/            # Application pages
+├── styles/           # Global styles and Tailwind config
+└── App.jsx           # Main application component
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Design Principles
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Minimalist**: Clean interface with essential elements only
+- **Black & White**: Monochromatic color scheme with subtle accents
+- **Responsive**: Fully responsive design for all devices
+- **Intuitive**: Simple, logical user flows for easy navigation
+- **Accessible**: WCAG compliant design for all users
 
-**Use GitHub Codespaces**
+## 🔍 Core Functionality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Music Discovery Flow
 
-## What technologies are used for this project?
+1. User selects preferences (genre, year, popularity)
+2. Application queries Spotify API with parameters
+3. Results are displayed in a clean, card-based layout
+4. Users can preview songs, save to playlists, or explore similar tracks
 
-This project is built with:
+### Spotify Integration
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- OAuth authentication for secure account linking
+- Ability to create and modify playlists
+- Song saving and listening history tracking
+- Personalized recommendations based on user's Spotify data
 
-## How can I deploy this project?
+## 📈 Future Enhancements
 
-Simply open [Lovable](https://lovable.dev/projects/280eccf9-f011-4146-905a-0e97a49dbc08) and click on Share -> Publish.
+- Machine learning for improved recommendation accuracy
+- Social features for sharing discoveries
+- Advanced filtering options (BPM, key, mood, etc.)
+- Offline mode with cached recommendations
+- Collaborative playlist creation
 
-## Can I connect a custom domain to my Lovable project?
+## 📄 License
 
-Yes, you can!
+MIT License - See LICENSE file for details
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 👥 Contributors
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [Your Name](https://github.com/yourusername)
+
+---
+
+Built with ♥️ for music lovers everywhere
+# SonicMuse
+
+A modern, minimalist music discovery platform that connects with Spotify to help users find new music based on their preferences.
+
+![SonicMuse](https://via.placeholder.com/800x400?text=SonicMuse)
+
+## 🎵 Features
+
+- **Genre Selection**: Discover music from specific genres or mix multiple genres
+- **Year/Era Filtering**: Find music from specific years or eras
+- **Popularity Control**: Toggle between mainstream hits and underground gems
+- **Spotify Integration**: Connect your Spotify account for personalized recommendations
+- **Playlist Creation**: Save your discoveries directly to custom Spotify playlists
+- **Similar Song Recommendations**: Find music similar to songs you already love
+- **Modern Interface**: Clean, black and white design inspired by Vercel's UI
+
+## 🚀 Tech Stack
+
+- **Frontend**: React + Vite
+- **UI Framework**: Tailwind CSS
+- **State Management**: React Context API
+- **Authentication**: Supabase Auth
+- **Database**: Supabase
+- **APIs**: Spotify Web API
+- **Deployment**: Vercel
+
+## 📋 Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- Spotify Developer Account (for API access)
+- Supabase Account (for auth and database)
+
+## 🛠️ Installation
+
+1. Clone the repository:
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Create a `.env` file in the root directory with the following:
+   ```
+   VITE_SPOTIFY_CLIENT_ID=your_spotify_client_id
+   VITE_SPOTIFY_REDIRECT_URI=http://localhost:5173/callback
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+## 🔐 Spotify API Setup
+
+1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
+2. Create a new application
+3. Set the redirect URI to `http://localhost:5173/callback` (for development)
+4. Copy your Client ID and Client Secret to your `.env` file
+
+## 🗄️ Supabase Setup
+
+1. Create a new project on [Supabase](https://supabase.com/)
+2. Set up authentication with the following tables:
+   - `users` - For user information and preferences
+   - `saved_songs` - For tracking saved recommendations
+   - `playlists` - For custom playlists created on the platform
+3. Copy your project URL and anon key to your `.env` file
+
+## 📱 Application Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── context/          # React Context for state management
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions and API clients
+├── pages/            # Application pages
+├── styles/           # Global styles and Tailwind config
+└── App.jsx           # Main application component
+```
+
+## 🎨 Design Principles
+
+- **Minimalist**: Clean interface with essential elements only
+- **Black & White**: Monochromatic color scheme with subtle accents
+- **Responsive**: Fully responsive design for all devices
+- **Intuitive**: Simple, logical user flows for easy navigation
+- **Accessible**: WCAG compliant design for all users
+
+## 🔍 Core Functionality
+
+### Music Discovery Flow
+
+1. User selects preferences (genre, year, popularity)
+2. Application queries Spotify API with parameters
+3. Results are displayed in a clean, card-based layout
+4. Users can preview songs, save to playlists, or explore similar tracks
+
+### Spotify Integration
+
+- OAuth authentication for secure account linking
+- Ability to create and modify playlists
+- Song saving and listening history tracking
+- Personalized recommendations based on user's Spotify data
+
+## 📈 Future Enhancements
+
+- Machine learning for improved recommendation accuracy
+- Social features for sharing discoveries
+- Advanced filtering options (BPM, key, mood, etc.)
+- Offline mode with cached recommendations
+- Collaborative playlist creation
+
+## 📄 License
+
+MIT License - See LICENSE file for details
+
