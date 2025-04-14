@@ -3,7 +3,9 @@
 
 A modern, minimalist music discovery platform that connects with Spotify to help users find new music based on their preferences.
 
-![SonicMuse](https://via.placeholder.com/800x400?text=SonicMuse)
+![image](https://github.com/user-attachments/assets/fcc8dd9e-ae9e-47e5-8457-9af2d5a556dc)
+![image](https://github.com/user-attachments/assets/da4c6a2e-5fd4-4fea-a770-200f8f1354d7)
+
 
 ## 🎵 Features
 
